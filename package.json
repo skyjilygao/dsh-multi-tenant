@@ -1,0 +1,56 @@
+{
+  "name": "dsh-multi-tenant",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness (DSH) 多租户插件：项目与用户多对多，默认管理员 admin/admin，管理员在 Web 控制台新增用户并分配 1~n 个项目；每个用户拥有独立工作区（项目目录的符号链接视图），只能看到自己 cwd 桶内的会话。零运行时依赖，TypeScript 开发。",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test test/"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-locale"
+      ],
+      "platform": "web"
+    }
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "plugin",
+    "multi-tenant"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "esbuild": "^0.28.2",
+    "typescript": "^7.0.2"
+  }
+}

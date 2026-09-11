@@ -1,0 +1,12 @@
+# dsh-multi-tenant 的 bundle 补丁：把插件行插入 profile 的插件树。
+# 安装：dsh plugin --profile web add github:<user>/dsh-multi-tenant（或 link: 本地路径）
+#
+# config 会原样传给 apply(ctx, config)；用户可在自己的 cordis.patch.yml 里
+# 用相同 id 覆盖（例如修改管理员密码、工作区根目录）。
+- insert:
+    - id: multi-tenant
+      name: 'dsh-multi-tenant'
+      config:
+        adminPassword: 'admin'
+        guardEnabled: true
+        tokenTtlHours: 72

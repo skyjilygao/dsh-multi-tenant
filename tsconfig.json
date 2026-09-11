@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "jsx": "react-jsx",
+    "strict": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "@deepseek-ai/cordis": ["./node_modules/@deepseek-ai/cordis"],
+      "@deepseek-ai/dsh-client-runtime": ["./node_modules/@deepseek-ai/dsh-client-runtime"],
+      "@deepseek-ai/dsh-client-runtime/client": ["./node_modules/@deepseek-ai/dsh-client-runtime/client.d.ts"],
+      "@deepseek-ai/dsh-client-locale": ["./node_modules/@deepseek-ai/dsh-client-locale"],
+      "@deepseek-ai/dsh-client-locale/client": ["./node_modules/@deepseek-ai/dsh-client-locale/client.d.ts"],
+      "@deepseek-ai/dsh-client-ui-slots": ["./node_modules/@deepseek-ai/dsh-client-ui-slots"],
+      "@deepseek-ai/dsh-client-ui-layout": ["./node_modules/@deepseek-ai/dsh-client-ui-layout"],
+      "@deepseek-ai/dsh-client-ui-settings": ["./node_modules/@deepseek-ai/dsh-client-ui-settings"],
+      "@deepseek-ai/dsh-client-ui-sidebar": ["./node_modules/@deepseek-ai/dsh-client-ui-sidebar"],
+      "@deepseek-ai/dsh-client-ui-conversation": ["./node_modules/@deepseek-ai/dsh-client-ui-conversation"]
+    }
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"]
+}

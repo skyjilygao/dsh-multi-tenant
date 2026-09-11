@@ -1,0 +1,42 @@
+# 依赖
+node_modules/
+.pnpm-store/
+
+# 注意：lib/ 是随仓库发布的构建产物（见 README：从 GitHub 安装无需本地构建），
+# 因此刻意不忽略 lib/。仅在本地临时构建时可自行取消下一行注释。
+# lib/
+
+# 测试产物（ui-check.mjs 的截图 / 临时数据）
+test/artifacts/
+
+# 日志
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# 覆盖率 / 缓存
+coverage/
+.nyc_output/
+*.tsbuildinfo
+.eslintcache
+.cache/
+
+# 环境变量
+.env
+.env.*
+!.env.example
+
+# 编辑器 / IDE
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+
+# 操作系统
+.DS_Store
+Thumbs.db
+Desktop.ini
